@@ -1,0 +1,183 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  //background-color: #c6c6c6;
+  padding: 20px 0;
+
+  :global {
+    .free-card {
+      display: inline-block;
+      // width: 100%;
+      vertical-align: top;
+      margin: 0 20px 20px 20px;
+      box-shadow: 5px 5px 15px #0000003d;
+      border-radius: 10px;
+    }
+
+    // .free-card+.free-card {
+    //   margin-left: 20px;
+    // }
+
+    .free-card.custom {
+      display: flex;
+      justify-content: space-between;
+      //width: 500px;
+      height: 300px;
+    }
+
+    .free-card.custom .next-card-media {
+      height: 100%;
+      width: 400px;
+      flex-shrink: 0;
+    }
+
+    .free-card-main {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      width: 100%;
+    }
+
+    .free-card-main .next-card-content-container {
+      flex: 1;
+      height: 150px;
+      overflow: hidden;
+      margin-top: 0;
+      margin-right: 10px;
+      overflow-y: auto;
+    }
+
+    .free-card-main .next-card-actions {
+      text-align: right;
+    }
+
+    .free-card-main .next-card-header-title {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .free-card-main .next-card-header-subtitle {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+  }
+}
+
+
+@import "~@alifd/next/variables.scss";
+
+.subheading {
+  width: 200px;
+  position: relative;
+  text-align: center;
+  font-size: 26px;
+  color: #333;
+  padding: 50px 0 0;
+  margin: 10px auto;
+  z-index: 1;
+
+  span {
+    position: absolute;
+    top: 30px;
+    left: 10%;
+    width: 35px;
+    height: 35px;
+    background: #48F4CB;
+    border-radius: 50%;
+    z-index: -1;
+  }
+
+  i {
+    position: absolute;
+    top: 60px;
+    right: 15%;
+    width: 25px;
+    height: 25px;
+    background: #FDC82F;
+    border-radius: 50%;
+    z-index: -1;
+  }
+}
+
+.CardList {
+  margin-top: -$shell-dark-content-paddingTop;
+  margin-right: -$shell-dark-content-paddingLeft;
+  margin-bottom: $shell-dark-content-paddingTop;
+  margin-left: -$shell-dark-content-paddingLeft;
+}
+
+.TagBox {
+  padding: 0 $shell-dark-content-paddingLeft $s-8;
+}
+
+.TagBoxItem {
+  display: flex;
+  align-items: center;
+}
+
+.TagTitleName {
+  width: 56px;
+  margin-right: 12px;
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 14px;
+  text-align: right;
+}
+
+.ListItem {
+  .main {
+    overflow: hidden;
+    background: #fff;
+    border-radius: 5px;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .content {
+    padding: 14px;
+  }
+
+  .title {
+    color: #333;
+    font-size: 14px;
+  }
+
+  .info {
+    margin-top: 13px;
+    color: #999;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .link {
+    margin-top: 13px;
+
+    a {
+      margin-right: 20px;
+      color: #999;
+      font-size: 12px;
+    }
+  }
+
+  .add {
+    height: 100%;
+    overflow: hidden;
+    background: #fff;
+    border: 1px dashed #eee;
+    border-radius: 5px;
+
+    .icon {
+      color: #999;
+    }
+  }
+
+  .addText {
+    margin-top: 20px;
+    color: #999;
+    font-size: 12px;
+    text-align: center;
+  }
+}
